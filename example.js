@@ -7,7 +7,7 @@ var CAMERA_HOST = '10.0.100.102', //axis
 	PASSWORD = 'root';
 
 var http = require('http'),
-	Cam = require('./lib/onvif').Cam;
+	Cam = require('./index').Cam;
 
 new Cam({
 	hostname: CAMERA_HOST,

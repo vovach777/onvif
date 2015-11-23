@@ -5,6 +5,6 @@
  */
 
 module.exports = {
-	Cam: require('./cam').Cam
-	, Discovery: require('./discovery').Discovery
+	Cam: require('./lib/cam').Cam
+	, Discovery: require('./lib/discovery').Discovery
 };
