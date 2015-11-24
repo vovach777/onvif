@@ -18,6 +18,13 @@ new Cam({
            console.dir(err);
 	   return;
         }
+ 	console.log('connected!');
+//	console.dir( this.time );
+//	console.dir( this.timeShift );
+//	console.dir( this.uri );
+//	console.dir( this.capabilities );
+//	console.dir( this.profiles );
+
 	this.getStreamUri({protocol:'RTSP'}, function(err, stream) {
 	        console.dir(err);
 		console.dir(stream);
