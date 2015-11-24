@@ -19,21 +19,23 @@ new Cam({
 	   return;
         }
  	console.log('connected!');
-//	console.dir( this.time );
+	console.dir( this.deviceInformation );
 //	console.dir( this.timeShift );
 //	console.dir( this.uri );
 //	console.dir( this.capabilities );
 //	console.dir( this.profiles );
 
 	this.getStreamUri({protocol:'RTSP'}, function(err, stream) {
+		if (err)
 	        console.dir(err);
-		console.dir(stream);
-		http.createServer(function (req, res) {
-			res.writeHead(200, {'Content-Type': 'text/html'});
-			res.end(
-				'<html><body>' +
-				'<embed type="application/x-vlc-plugin" target="' + stream.uri + '"></embed>' +
-				'</boby></html>');
-		}).listen(3030);
+		else
+			console.dir(stream);
+		// http.createServer(function (req, res) {
+		// 	res.writeHead(200, {'Content-Type': 'text/html'});
+		// 	res.end(
+		// 		'<html><body>' +
+		// 		'<embed type="application/x-vlc-plugin" target="' + stream.uri + '"></embed>' +
+		// 		'</boby></html>');
+		// }).listen(3030);
 	});
 });
