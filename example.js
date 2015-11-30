@@ -23,8 +23,7 @@ new Cam({
 //	console.dir( this.timeShift );
 //	console.dir( this.uri );
 //	console.dir( this.capabilities );
-//	console.dir( this.profiles );
-
+	console.dir( this.profiles );
 	this.getStreamUri({protocol:'RTSP'}, function(err, stream) {
 		if (err)
 	        console.dir(err);
